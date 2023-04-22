@@ -35,7 +35,7 @@ ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed 
 
    ![CMAKE Finished](images/finished.png  "CMAKE Finished")
 
-   <font color=Red size=4>>Note: If the following error occurs, Please install  [YDLIDAR/YDLidar-SDK](https://github.com/YDLIDAR/YDLidar-SDK) first.</font>
+   <font color=Red size=4>>Note: If the following error occurs, Please install  [g0rd0n2007/YDLidar-SDK](https://github.com/g0rd0n2007/YDLidar-SDK) first.</font>
 
    ![CMAKE ERROR](images/cmake_error.png  "CMAKE ERROR")
 
