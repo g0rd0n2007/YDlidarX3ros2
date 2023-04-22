@@ -28,7 +28,7 @@ ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed 
 2. Build ydlidar_ros2_driver package :
 
    ```
-   cd ydlidar_ros2_ws
+   cd [your_ws_directory]
    colcon build --symlink-install
    ```
    Note: install colcon [see](https://index.ros.org/doc/ros2/Tutorials/Colcon-Tutorial/#install-colcon)
