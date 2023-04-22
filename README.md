@@ -17,7 +17,7 @@ ydlidar_ros2_driver is a new ros package, which is designed to gradually become 
 ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed YDLidar-SDK library or it is out of date, you must first install YDLidar-SDK library. If you have installed the latest version of YDLidar-SDK, skip this step and go to the next step.
 
 1. Download or clone the [g0rd0n2007/YDLidar-SDK](https://github.com/g0rd0n2007/YDLidar-SDK) repository on GitHub.
-2. Compile and install the YDLidar-SDK under the ***build*** directory following `README.md` of YDLIDAR/YDLidar-SDK.
+2. Compile and install the YDLidar-SDK under the ***build*** directory following `README.md` of g0rd0n2007/YDLidar-SDK.
 
 ## Clone ydlidar_ros2_driver
 
