@@ -23,7 +23,7 @@ ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed 
 
 1. Clone ydlidar_ros2_driver package for github : 
 
-   `git clone https://github.com/g0rd0n2007/YDlidarX3ros2.git ydlidar_ros2_ws/src/ydlidar_ros2_driver`
+   `git clone https://github.com/g0rd0n2007/YDlidarX3ros2.git [your_ws_directory]/src/ydlidar_ros2_driver`
 
 2. Build ydlidar_ros2_driver package :
 
