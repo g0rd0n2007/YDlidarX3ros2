@@ -23,7 +23,7 @@ ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed 
 
 1. Clone ydlidar_ros2_driver package for github : 
 
-   `git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git ydlidar_ros2_ws/src/ydlidar_ros2_driver`
+   `git clone https://github.com/g0rd0n2007/YDlidarX3ros2.git ydlidar_ros2_ws/src/ydlidar_ros2_driver`
 
 2. Build ydlidar_ros2_driver package :
 
@@ -71,23 +71,23 @@ ydlidar_ros2_driver_node:
     port: /dev/ttyUSB0
     frame_id: laser_frame
     ignore_array: ""
-    baudrate: 230400
+    baudrate: 115200
     lidar_type: 1
     device_type: 0
-    sample_rate: 9
+    sample_rate: 3
     abnormal_check_count: 4
     resolution_fixed: true
-    reversion: true
+    reversion: false
     inverted: true
     auto_reconnect: true
-    isSingleChannel: false
+    isSingleChannel: true
     intensity: false
-    support_motor_dtr: false
+    support_motor_dtr: true
     angle_max: 180.0
     angle_min: -180.0
-    range_max: 64.0
-    range_min: 0.01
-    frequency: 10.0
+    range_max: 12.0
+    range_min: 0.1
+    frequency: 5.0
     invalid_range_is_inf: false
 ```
 
@@ -152,26 +152,26 @@ The ydlidar_ros2_driver internal parameters are in the launch file, they are lis
 
 | Parameter name | Data Type | detail                                                       |
 | -------------- | ------- | ------------------------------------------------------------ |
-| port         | string | Set Lidar the serial port or IP address <br/>it can be set to `/dev/ttyUSB0`, `192.168.1.11`, etc. <br/>default: `/dev/ydlidar` |
+| port         | string | Set Lidar the serial port or IP address <br/>it can be set to `/dev/ttyUSB0`, `192.168.1.11`, etc. <br/>default: `/dev/ttyUSB0` |
 | frame_id     | string | Lidar TF coordinate system name. <br/>default: `laser_frame` |
 | ignore_array | string | LiDAR filtering angle area<br/>eg: `-90, -80, 30, 40` |
-| baudrate     | int | Lidar baudrate or network port. <br/>default: `230400` |
+| baudrate     | int | Lidar baudrate or network port. <br/>default: `115200` |
 | lidar_type     | int | Set lidar type <br/>0 -- TYPE_TOF<br/>1 -- TYPE_TRIANGLE<br/>2 -- TYPE_TOF_NET <br/>default: `1` |
 | device_type     | int | Set device type <br/>0 -- YDLIDAR_TYPE_SERIAL<br/>1 -- YDLIDAR_TYPE_TCP<br/>2 -- YDLIDAR_TYPE_UDP <br/>default: `0` |
-| sample_rate     | int | Set Lidar Sample Rate. <br/>default: `9` |
+| sample_rate     | int | Set Lidar Sample Rate. <br/>default: `3` |
 | abnormal_check_count     | int | Set the number of abnormal startup data attempts. <br/>default: `4` |
-| fixed_resolution     | bool | Fixed angluar resolution. <br/>default: `true` |
-| reversion     | bool | Reversion LiDAR. <br/>default: `true` |
+| resolution_fixed     | bool | Fixed angluar resolution. <br/>default: `true` |
+| reversion     | bool | Reversion LiDAR. <br/>default: `false` |
 | inverted     | bool | Inverted LiDAR.<br/>false -- ClockWise.<br/>true -- CounterClockWise  <br/>default: `true` |
 | auto_reconnect     | bool | Automatically reconnect the LiDAR.<br/>true -- hot plug. <br/>default: `true` |
-| isSingleChannel     | bool | Whether LiDAR is a single-channel.<br/>default: `false` |
+| isSingleChannel     | bool | Whether LiDAR is a single-channel.<br/>default: `true` |
 | intensity     | bool | Whether LiDAR has intensity.<br/>true -- G2 LiDAR.<br/>default: `false` |
-| support_motor_dtr     | bool | Whether the Lidar can be started and stopped by Serial DTR.<br/>default: `false` |
+| support_motor_dtr     | bool | Whether the Lidar can be started and stopped by Serial DTR.<br/>default: `true` |
 | angle_min     | float | Minimum Valid Angle.<br/>default: `-180` |
 | angle_max     | float | Maximum Valid Angle.<br/>default: `180` |
 | range_min     | float | Minimum Valid range.<br/>default: `0.1` |
-| range_max     | float | Maximum Valid range.<br/>default: `16.0` |
-| frequency     | float | Set Scanning Frequency.<br/>default: `10.0` |
+| range_max     | float | Maximum Valid range.<br/>default: `12.0` |
+| frequency     | float | Set Scanning Frequency.<br/>default: `5.0` |
 | invalid_range_is_inf     | bool | Invalid Range is inf.<br/>true -- inf.<br/>false -- 0.0.<br/>default: `false` |
 More paramters details, see [here](details.md)
 
@@ -179,7 +179,6 @@ More paramters details, see [here](details.md)
 ![Development Path](images/EAI.png)
 
 If you have any extra questions, please feel free to [contact us](http://www.ydlidar.cn/cn/contact)
-
 
 
 
