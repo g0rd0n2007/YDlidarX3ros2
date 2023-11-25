@@ -68,7 +68,7 @@ ydlidar_ros2_driver depends on YDLidar-SDK library. If you have never installed 
 ```
 ydlidar_ros2_driver_node:
   ros__parameters:
-    port: /dev/ttyUSB0
+    port: /dev/ydlidar
     frame_id: laser_frame
     ignore_array: ""
     baudrate: 115200
